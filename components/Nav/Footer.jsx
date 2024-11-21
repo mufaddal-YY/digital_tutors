@@ -19,7 +19,7 @@ const Footer = () => {
           </article>
           <article className="mt-4">
             <Link
-              href={`tel:+9185220 88895`}
+              href={`tel:`}
               className="flex gap-2 text-md font-medium py-2">
               <span className="text-xl text-[#002391]">
                 <MdCall />
@@ -28,7 +28,7 @@ const Footer = () => {
             </Link>
 
             <Link
-              href={`mailto:hangzz.solutions@gmail.com`}
+              href={`mailto:`}
               className="flex gap-2 text-md font-medium py-2">
               <span className="text-xl text-[#002391]">
                 <MdEmail />
