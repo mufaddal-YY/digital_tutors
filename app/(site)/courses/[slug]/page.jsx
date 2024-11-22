@@ -5,6 +5,7 @@ import WhatYouLearn from "@/components/Courses/WhatYouLearn";
 import CourseDescription from "@/components/Courses/CourseDescription";
 import Testimonials from "@/components/Testimonials";
 import Cta from "@/components/Cta";
+import CourseSidebar from "@/components/Courses/CourseSidebar";
 
 const CourseDetailPage = async ({ params }) => {
   const { slug } = await params; // Await params here
@@ -31,7 +32,9 @@ const CourseDetailPage = async ({ params }) => {
           <div
             className="w-full lg:w-4/12 py-6 order-first lg:order-last"
             id="enquiry">
-            <div className="sticky-enquiry-form"></div>
+            <div className="sticky-enquiry-form">
+              <CourseSidebar coursesDetail={coursesDetail} />
+            </div>
           </div>
         </article>
       </section>
