@@ -6,13 +6,12 @@ import Testimonials from "@/components/Testimonials";
 import Cta from "@/components/Cta";
 
 export default async function Home() {
-
   const homeData = await getHomeData();
   const coursesData = await getCoursesData();
 
   return (
     <main>
-      <section className="p-2 mt-14">
+      <section className="mt-14">
         <HeroBanner homeData={homeData} />
         <CoursesSection coursesData={coursesData} />
         <WhyUsSection homeData={homeData} />
