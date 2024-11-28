@@ -23,7 +23,7 @@ const Header = () => {
               <Image
                 className="py-2"
                 src={Logo}
-                width={100}
+                width={150}
                 height={100}
                 alt="Logo"
               />
@@ -36,7 +36,7 @@ const Header = () => {
                 (pathname.includes(item?.path) && item?.path?.length > 1) ||
                 pathname === item?.path;
 
-              const linkClasses = `text-md font-regular border border-[#fff] rounded-lg hover:text-[#FF3C3F] mx-4 px-4 py-1 transition-colors duration-600 ease-in-out ${
+              const linkClasses = `text-md font-regular border border-[#fff] rounded-lg hover:text-[#FF3C3F] mx-2 px-4 py-1 transition-colors duration-600 ease-in-out ${
                 isActive ? "text-[#FF3C3F] border !border-[#FF3C3F]" : ""
               }`;
 

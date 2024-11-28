@@ -43,14 +43,14 @@ const CoursesSection = ({ coursesData }) => {
     infinite: true,
     speed: 1000,
     autoplay: true,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
     responsive: [
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
       {
@@ -119,39 +119,38 @@ const CoursesSection = ({ coursesData }) => {
             {...settings}
             className="flex flex-row justify-between items-center">
             {coursesData.map((item, idx) => (
-              <article key={idx}>
-                <div className="bg-white border border-[#1A0034] rounded-xl p-2">
+              <article className="p-2" key={idx}>
+                <div className="bg-white border border-[#1A0034] rounded-xl">
                   <div className="flex flex-col md:flex-row lg:flex-row items-center">
-                    <div className="w-full lg:w-1/3">
+                    <div className="relative overflow-hidden rounded-lg lg:rounded-l-lg w-full h-[450px] lg:w-1/2">
                       <Image
-                        className="rounded-md"
+                        className="rounded-lg lg:rounded-l-lg object-cover hover:scale-[1.07] duration-1000"
                         src={item?.courseThumb}
-                        width={500}
-                        height={500}
+                        layout="fill"
                         alt={idx}
                       />
                     </div>
-                    <div className="w-full lg:w-2/3 p-3">
+                    <div className="w-full lg:w-1/2 p-3">
                       <div className="flex flex-col gap-2 flex-start">
                         <div>
                           <Badge>Most Popular</Badge>
                         </div>
 
-                        <h2 className="text-2xl">{item?.courseName}</h2>
-                        <p>{item?.subHeadline}</p>
+                        <h2 className="text-xl font-semibold">
+                          {item?.courseName}
+                        </h2>
+                        <p className="text-md">{item?.subHeadline}</p>
 
                         <Separator className="my-2" />
                       </div>
                       <div className="flex flex-wrap">
                         {usps.map((item) => (
-                          <div
-                            className="w-full md:w-1/2 lg:w-1/2"
-                            key={item?.id}>
+                          <div className="w-full" key={item?.id}>
                             <p className="flex items-center gap-2 mb-4">
                               <span className="text-[#FF3C3F]">
                                 {item?.icon}
                               </span>
-                              <span>{item?.title}</span>
+                              <span className="text-sm">{item?.title}</span>
                             </p>
                           </div>
                         ))}

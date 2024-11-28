@@ -11,7 +11,7 @@ export default async function Home() {
 
   return (
     <main>
-      <section className="mt-14">
+      <section className="mt-24">
         <HeroBanner homeData={homeData} />
         <CoursesSection coursesData={coursesData} />
         <WhyUsSection homeData={homeData} />

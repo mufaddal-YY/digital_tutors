@@ -7,6 +7,7 @@ import { CgPlayButtonO } from "react-icons/cg";
 import { MdOutlineCloudDownload } from "react-icons/md";
 import { GrCertificate } from "react-icons/gr";
 import { IoInfiniteSharp } from "react-icons/io5";
+
 const usps = [
   {
     id: "1",
@@ -32,10 +33,10 @@ const usps = [
 
 const CourseSidebar = ({ coursesDetail }) => {
   return (
-    <main>
+    <main className="sticky-enquiry-form">
       <div className="bg-gray-100 rounded-xl p-2 lg:p-4">
         <Image
-          className=""
+          className="rounded-lg"
           src={coursesDetail?.courseThumb}
           width={500}
           height={500}

@@ -45,11 +45,10 @@ const HeroBanner = ({ homeData }) => {
                   <article className="w-full lg:w-1/2 mb-4 lg:mb-0">
                     <div className="w-full mb-4 md:items-center md:justify-center">
                       <div className="p-2 mx-auto relative z-10 w-full lg:py-12 md:pt-0">
-                        <h1 className="text-4xl md:text-5xl lg:text-5xl leading-snug font-semibold text-left py-3 text-white">
-                          Unlock Your Potential with{" "}
-                          <br className="hidden lg:block" /> Practical Skills
-                          for Tomorrow
-                        </h1>
+                        <h2 className="text-4xl md:text-5xl lg:text-5xl leading-snug font-semibold text-left py-3 text-white">
+                          Unlock Your Potential with Practical Skills for
+                          Tomorrow
+                        </h2>
 
                         <p className="mt-4 font-normal lg:text-lg text-gray-50 max-w-2xl text-left">
                           {item.subHeadline}

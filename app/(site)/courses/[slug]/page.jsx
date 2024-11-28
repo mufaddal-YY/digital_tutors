@@ -13,7 +13,7 @@ const CourseDetailPage = async ({ params }) => {
   const homeData = await getHomeData();
   return (
     <main>
-      <section className="mt-14">
+      <section className="mt-[80px]">
         <CourseBanner
           courseName={coursesDetail.courseName}
           slug={coursesDetail.slug}
@@ -27,6 +27,7 @@ const CourseDetailPage = async ({ params }) => {
               <WhatYouLearn coursesDetail={coursesDetail} />
               <CourseContent coursesDetail={coursesDetail} />
               <CourseDescription coursesDetail={coursesDetail} />
+              <Testimonials homeData={homeData} />
             </article>
           </div>
           <div
@@ -39,7 +40,6 @@ const CourseDetailPage = async ({ params }) => {
         </article>
       </section>
       <section>
-        <Testimonials homeData={homeData} />
         <Cta homeData={homeData} />
       </section>
     </main>

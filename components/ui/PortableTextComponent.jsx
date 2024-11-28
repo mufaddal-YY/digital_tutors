@@ -41,9 +41,11 @@ const PortableTextComponent = ({ content }) => {
           h4: (props) => <h4 style={{ fontSize: "28px" }} {...props} />,
           h5: (props) => <h4 style={{ fontSize: "18px" }} {...props} />,
           li: ({ children }) => (
-            <li className="special-list-item text-sm items-center lg:text-md flex list-none leading-snug py-2">
-              <FiCheckCircle className="mr-2 text-md text-green-400" />{" "}
-              {children}
+            <li className="special-list-item text-sm flex lg:text-md list-none leading-snug py-2">
+              <span>
+                <FiCheckCircle className="mr-2 text-md text-green-400" />{" "}
+              </span>
+              <span>{children}</span>
             </li>
           ),
           normal: ({ children }) => {

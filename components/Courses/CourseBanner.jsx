@@ -21,6 +21,10 @@ const CourseBanner = ({ courseName, slug, subHeadline }) => {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
+                <BreadcrumbLink href="/courses">Courses</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
                 <BreadcrumbLink href={`/courses/${slug}`}>
                   {courseName}
                 </BreadcrumbLink>

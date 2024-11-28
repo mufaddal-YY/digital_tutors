@@ -10,7 +10,7 @@ export default async function AboutPage() {
 
   return (
     <main>
-      <section className="p-2 mt-14">
+      <section className="mt-[80px]">
         <PageBanner />
         <AboutDigital aboutData={aboutData} />
         <VisionMission aboutData={aboutData} />

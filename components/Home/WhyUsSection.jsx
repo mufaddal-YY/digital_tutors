@@ -32,7 +32,7 @@ const whyUsps = [
 
 const WhyUsSection = ({ homeData }) => {
   return (
-    <main className="bg-gray-100">
+    <main className="bg-gray-50">
       <section className="container py-[50px]">
         {homeData.map((item, idx) => (
           <article
@@ -41,6 +41,7 @@ const WhyUsSection = ({ homeData }) => {
             <div className="w-full lg:w-5/12">
               <div className="flex justify-center">
                 <Image
+                  className="rounded-xl"
                   src={item.whySectionImage}
                   width={400}
                   height={400}

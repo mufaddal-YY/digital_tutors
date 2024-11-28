@@ -9,7 +9,7 @@ const CoursesPage = async () => {
 
   return (
     <main>
-      <section className="mt-14">
+      <section className="mt-[80px]">
         <Banner />
         <CoursesGrid courseData={courseData} />
         <Cta homeData={homeData} />
