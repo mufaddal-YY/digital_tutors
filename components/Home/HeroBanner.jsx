@@ -7,6 +7,7 @@ import { FaStar } from "react-icons/fa";
 import { AnimatedTooltip } from "../ui/animated-tooltip";
 import Image from "next/image";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import ReactPlayer from "react-player";
 
 const people = [
   {
@@ -55,7 +56,7 @@ const HeroBanner = ({ homeData }) => {
                         </p>
 
                         <div className="my-6">
-                          <Link href="/#contact">
+                          <Link href="/#courses">
                             <Button size="xl" className="flex gap-2">
                               Start Learning <MdOutlineArrowForwardIos />
                             </Button>
@@ -95,7 +96,12 @@ const HeroBanner = ({ homeData }) => {
                     </div>
                   </article>
                   <article className="w-full lg:w-1/2">
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center mt-3 items-center">
+                      {/* <ReactPlayer
+                        url={propertyDetail?.video}
+                        style={{ borderRadius: "24px" }}
+                      /> */}
+
                       <Image
                         src={item.heroImage}
                         width={500}

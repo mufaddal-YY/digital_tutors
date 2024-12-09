@@ -14,6 +14,7 @@ import { GrCertificate } from "react-icons/gr";
 import { IoInfiniteSharp } from "react-icons/io5";
 import { IoMdArrowForward } from "react-icons/io";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const usps = [
   {
@@ -79,7 +80,7 @@ const CoursesSection = ({ coursesData }) => {
   const isInView = useInView(sectionRef, { once: false });
 
   return (
-    <main className="bg-white items-center py-[100px]">
+    <main className="bg-white items-center py-[100px]" id="courses">
       <section className="container items-center">
         <article className="flex flex-col lg:flex-row justify-between items-center">
           <div className="">
@@ -156,9 +157,11 @@ const CoursesSection = ({ coursesData }) => {
                         ))}
                       </div>
                       <div className="my-2">
+                        <Link href={`/courses/${item?.slug}`}>
                         <Button>
                           Learn More <IoMdArrowForward />
                         </Button>
+                        </Link>
                       </div>
                     </div>
                   </div>

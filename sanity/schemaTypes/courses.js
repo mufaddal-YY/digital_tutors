@@ -46,6 +46,16 @@ export default {
       },
     },
     {
+      name: "videoLink",
+      title: "Video Link",
+      type: "string",
+    },
+    {
+      name: "courseLink",
+      title: "Course Link",
+      type: "string",
+    },
+    {
       name: "whatYouLearn",
       title: "What will you learn",
       type: "array",

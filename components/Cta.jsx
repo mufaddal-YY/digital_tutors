@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import Link from "next/link";
 
 const Cta = ({ homeData }) => {
   return (
@@ -17,9 +18,11 @@ const Cta = ({ homeData }) => {
               {item.ctaDesc}
             </p>
             <div className="mt-8 flex justify-center">
-              <Button size="xl" variant="secondary" className="flex gap-2">
-                Start Learning <MdOutlineArrowForwardIos />
-              </Button>
+              <Link href={"/courses"}>
+                <Button size="xl" variant="secondary" className="flex gap-2">
+                  Start Learning <MdOutlineArrowForwardIos />
+                </Button>
+              </Link>
             </div>
           </article>
         ))}

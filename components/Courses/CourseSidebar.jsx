@@ -7,6 +7,7 @@ import { CgPlayButtonO } from "react-icons/cg";
 import { MdOutlineCloudDownload } from "react-icons/md";
 import { GrCertificate } from "react-icons/gr";
 import { IoInfiniteSharp } from "react-icons/io5";
+import Link from "next/link";
 
 const usps = [
   {
@@ -35,18 +36,27 @@ const CourseSidebar = ({ coursesDetail }) => {
   return (
     <main className="sticky-enquiry-form">
       <div className="bg-gray-100 rounded-xl p-2 lg:p-4">
-        <Image
-          className="rounded-lg"
-          src={coursesDetail?.courseThumb}
-          width={500}
-          height={500}
-          alt={coursesDetail?.courseName}
-        />
+        <Link target="_blank" href={coursesDetail?.videoLink}>
+          <div className="relative">
+            <Image
+              className="rounded-lg"
+              src={coursesDetail?.courseThumb}
+              width={500}
+              height={500}
+              alt={coursesDetail?.courseName}
+            />
+            <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white animate-pulse text-[#FF3C3F] rounded-full w-16 h-16 flex items-center justify-center">
+              ▶
+            </button>
+          </div>
+        </Link>
 
         <div className="my-4">
-          <Button size="xl" className="flex gap-2">
-            Enroll Now <IoMdArrowForward />
-          </Button>
+          <Link target="_blank" href={coursesDetail?.courseLink}>
+            <Button size="xl" className="flex gap-2">
+              Enroll Now <IoMdArrowForward />
+            </Button>
+          </Link>
         </div>
 
         <div className="my-4">
