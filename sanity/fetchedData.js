@@ -76,6 +76,10 @@ export async function getCoursesData() {
          whatYouLearn,
          courseContent,
          courseDescription,
+         onDemandVideo,
+         devices,
+         lifetimeAccess,
+         certificate,
         }`,
     {},
     defaultFetchOptions
@@ -100,6 +104,14 @@ export async function getCoursesDetailData(slug) {
          whatYouLearn,
          courseContent,
          courseDescription,
+         onDemandVideo,
+         devices,
+         lifetimeAccess,
+         certificate,
+         testimonials[]{
+         name,
+         review
+         },
         }`,
     { slug, defaultFetchOptions }
   );

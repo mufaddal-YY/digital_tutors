@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { IoMdArrowForward } from "react-icons/io";
@@ -8,48 +9,56 @@ import { MdOutlineCloudDownload } from "react-icons/md";
 import { GrCertificate } from "react-icons/gr";
 import { IoInfiniteSharp } from "react-icons/io5";
 import Link from "next/link";
-
-const usps = [
-  {
-    id: "1",
-    title: "30 hours on-demand video",
-    icon: <CgPlayButtonO />,
-  },
-  {
-    id: "2",
-    title: "85 downloadable resources",
-    icon: <MdOutlineCloudDownload />,
-  },
-  {
-    id: "3",
-    title: "Certificate of completion",
-    icon: <GrCertificate />,
-  },
-  {
-    id: "4",
-    title: "Full lifetime access",
-    icon: <IoInfiniteSharp />,
-  },
-];
+import ReactPlayer from "react-player";
 
 const CourseSidebar = ({ coursesDetail }) => {
+  const usps = [
+    {
+      id: "1",
+      title: coursesDetail?.onDemandVideo,
+      icon: <CgPlayButtonO />,
+    },
+    {
+      id: "2",
+      title: coursesDetail?.devices,
+      icon: <MdOutlineCloudDownload />,
+    },
+    {
+      id: "3",
+      title: coursesDetail?.lifetimeAccess,
+      icon: <GrCertificate />,
+    },
+    {
+      id: "4",
+      title: coursesDetail?.certificate,
+      icon: <IoInfiniteSharp />,
+    },
+  ];
+
   return (
     <main className="sticky-enquiry-form">
       <div className="bg-gray-100 rounded-xl p-2 lg:p-4">
-        <Link target="_blank" href={coursesDetail?.videoLink}>
-          <div className="relative">
-            <Image
+        <div className="relative w-full h-[300px] max-w-lg mx-auto rounded-md overflow-hidden">
+          {/* <Image
               className="rounded-lg"
               src={coursesDetail?.courseThumb}
               width={500}
               height={500}
               alt={coursesDetail?.courseName}
-            />
-            <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white animate-pulse text-[#FF3C3F] rounded-full w-16 h-16 flex items-center justify-center">
-              ▶
-            </button>
-          </div>
-        </Link>
+            /> */}
+          <ReactPlayer
+            url={coursesDetail?.videoLink}
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+            width="100%" // Ensures it adapts to the parent div
+            height="100%" // Maintains aspect ratio based on width
+          />
+          {/* <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white animate-pulse text-[#FF3C3F] rounded-full w-16 h-16 flex items-center justify-center">
+            ▶
+          </button> */}
+        </div>
 
         <div className="my-4">
           <Link target="_blank" href={coursesDetail?.courseLink}>

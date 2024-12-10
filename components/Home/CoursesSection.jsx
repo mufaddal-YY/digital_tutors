@@ -16,30 +16,30 @@ import { IoMdArrowForward } from "react-icons/io";
 import { Button } from "../ui/button";
 import Link from "next/link";
 
-const usps = [
-  {
-    id: "1",
-    title: "30 hours on-demand video",
-    icon: <CgPlayButtonO />,
-  },
-  {
-    id: "2",
-    title: "85 downloadable resources",
-    icon: <MdOutlineCloudDownload />,
-  },
-  {
-    id: "3",
-    title: "Certificate of completion",
-    icon: <GrCertificate />,
-  },
-  {
-    id: "4",
-    title: "Full lifetime access",
-    icon: <IoInfiniteSharp />,
-  },
-];
-
 const CoursesSection = ({ coursesData }) => {
+  const usps = [
+    {
+      id: "1",
+      title: coursesData?.onDemandVideo,
+      icon: <CgPlayButtonO />,
+    },
+    {
+      id: "2",
+      title: coursesData?.devices,
+      icon: <MdOutlineCloudDownload />,
+    },
+    {
+      id: "3",
+      title: coursesData?.lifetimeAccess,
+      icon: <GrCertificate />,
+    },
+    {
+      id: "4",
+      title: coursesData?.certificate,
+      icon: <IoInfiniteSharp />,
+    },
+  ];
+
   const settings = {
     infinite: true,
     speed: 1000,
@@ -145,22 +145,48 @@ const CoursesSection = ({ coursesData }) => {
                         <Separator className="my-2" />
                       </div>
                       <div className="flex flex-wrap">
-                        {usps.map((item) => (
-                          <div className="w-full" key={item?.id}>
-                            <p className="flex items-center gap-2 mb-4">
-                              <span className="text-[#FF3C3F]">
-                                {item?.icon}
-                              </span>
-                              <span className="text-sm">{item?.title}</span>
-                            </p>
-                          </div>
-                        ))}
+                        <div className="w-full">
+                          <p className="flex items-center gap-2 mb-4">
+                            <span className="text-[#FF3C3F]">
+                              <CgPlayButtonO />
+                            </span>
+                            <span className="text-sm">
+                              {item?.onDemandVideo}
+                            </span>
+                          </p>
+                        </div>
+                        <div className="w-full">
+                          <p className="flex items-center gap-2 mb-4">
+                            <span className="text-[#FF3C3F]">
+                              <MdOutlineCloudDownload />
+                            </span>
+                            <span className="text-sm">{item?.devices}</span>
+                          </p>
+                        </div>
+                        <div className="w-full">
+                          <p className="flex items-center gap-2 mb-4">
+                            <span className="text-[#FF3C3F]">
+                              <GrCertificate />
+                            </span>
+                            <span className="text-sm">
+                              {item?.lifetimeAccess}
+                            </span>
+                          </p>
+                        </div>
+                        <div className="w-full">
+                          <p className="flex items-center gap-2 mb-4">
+                            <span className="text-[#FF3C3F]">
+                              <IoInfiniteSharp />
+                            </span>
+                            <span className="text-sm">{item?.certificate}</span>
+                          </p>
+                        </div>
                       </div>
                       <div className="my-2">
                         <Link href={`/courses/${item?.slug}`}>
-                        <Button>
-                          Learn More <IoMdArrowForward />
-                        </Button>
+                          <Button>
+                            Learn More <IoMdArrowForward />
+                          </Button>
                         </Link>
                       </div>
                     </div>

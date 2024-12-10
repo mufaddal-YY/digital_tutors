@@ -8,14 +8,20 @@ import Cta from "@/components/Cta";
 export default async function Home() {
   const homeData = await getHomeData();
   const coursesData = await getCoursesData();
-
   return (
     <main>
       <section className="mt-24">
         <HeroBanner homeData={homeData} />
         <CoursesSection coursesData={coursesData} />
         <WhyUsSection homeData={homeData} />
-        <Testimonials homeData={homeData} />
+        {homeData.map((item, idx) => (
+          <div key={idx}>
+            <Testimonials
+              homeData={homeData}
+              testimonialsData={item.testimonials}
+            />
+          </div>
+        ))}
         <Cta homeData={homeData} />
       </section>
     </main>

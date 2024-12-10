@@ -85,5 +85,47 @@ export default {
         },
       ],
     },
+    {
+      name: "onDemandVideo",
+      title: "On Demand Video",
+      type: "string",
+    },
+    {
+      name: "devices",
+      title: "Devices",
+      type: "string",
+    },
+    {
+      name: "lifetimeAccess",
+      title: "Lifetime Access",
+      type: "string",
+    },
+    {
+      name: "certificate",
+      title: "Certificate",
+      type: "string",
+    },
+    {
+      name: "testimonials",
+      title: "Course Testimonials",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "name",
+              title: "name",
+              type: "string",
+            },
+            {
+              name: "review",
+              title: "Review",
+              type: "string",
+            },
+          ],
+        },
+      ],
+    },
   ],
 };

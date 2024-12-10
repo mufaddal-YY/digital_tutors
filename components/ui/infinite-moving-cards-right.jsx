@@ -91,7 +91,7 @@ export const InfiniteMovingCardsRight = ({
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
                   <span className="text-sm capitalize leading-[1.6] text-gray-200 font-normal">
-                    {item.name}
+                    ~{item.name}
                   </span>
                 </span>
               </div>
