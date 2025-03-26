@@ -126,7 +126,7 @@ const CoursesSection = ({ coursesData }) => {
                     <div className="relative overflow-hidden rounded-lg lg:rounded-l-lg w-full h-[450px] lg:w-1/2">
                       <Image
                         className="rounded-lg lg:rounded-l-lg object-cover hover:scale-[1.07] duration-1000"
-                        src={item?.courseThumb}
+                        src={item?.homeThumb}
                         layout="fill"
                         alt={idx}
                       />

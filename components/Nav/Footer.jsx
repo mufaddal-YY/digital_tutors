@@ -19,15 +19,6 @@ const Footer = () => {
           </article>
           <article className="mt-4">
             <Link
-              href={`tel:`}
-              className="flex gap-2 text-md font-medium py-2">
-              <span className="text-xl text-[#002391]">
-                <MdCall />
-              </span>
-              +91 1234567890
-            </Link>
-
-            <Link
               href={`mailto:`}
               className="flex gap-2 text-md font-medium py-2">
               <span className="text-xl text-[#002391]">

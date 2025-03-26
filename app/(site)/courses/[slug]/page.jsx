@@ -7,6 +7,18 @@ import Testimonials from "@/components/Testimonials";
 import Cta from "@/components/Cta";
 import CourseSidebar from "@/components/Courses/CourseSidebar";
 
+export async function generateMetadata({ params }) {
+  const { slug } = await params; // Await params here
+  const coursesDetail = await getCoursesDetailData(slug);
+  console.log(coursesDetail);
+
+  return {
+    title: coursesDetail?.metatitle,
+    description: coursesDetail?.metaDescription,
+    keywords: coursesDetail?.metaKeywords,
+  };
+}
+
 const CourseDetailPage = async ({ params }) => {
   const { slug } = await params; // Await params here
   const coursesDetail = await getCoursesDetailData(slug);

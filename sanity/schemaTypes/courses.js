@@ -38,6 +38,14 @@ export default {
       },
     },
     {
+      name: "homeThumb",
+      title: "Home Page Thumbnail",
+      type: "image",
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+    },
+    {
       name: "courseThumb",
       title: "Course Thumbnail",
       type: "image",

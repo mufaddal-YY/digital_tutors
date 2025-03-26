@@ -54,11 +54,11 @@ const Header = () => {
             <MobileNav />
           </div>
           <div className="hidden lg:flex">
-            <Link href="#cta">
+            {/* <Link href="#cta">
               <Button className="btn-primary">
                 Enquire Now
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </header>
