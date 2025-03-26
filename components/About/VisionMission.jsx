@@ -10,14 +10,14 @@ const VisionMission = ({ aboutData }) => {
   return (
     <section className="">
       <div className="flex flex-col lg:flex-row">
-        {aboutData.map((item, idx) => (
+        {/* {aboutData.map((item, idx) => (
           <div
             key={idx}
             className="w-full lg:w-5/12 bg-no-repeat bg-center bg-cover lg:bg-cover items-center"
             style={{
               backgroundImage: `url("${item?.visionSectionImage}")`,
             }}></div>
-        ))}
+        ))} */}
 
         <div className="w-full lg:w-7/12 bg-primary flex py-[100px] p-8">
           {aboutData.map((item, idx) => (
