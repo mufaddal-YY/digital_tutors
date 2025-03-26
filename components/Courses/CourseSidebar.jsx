@@ -48,10 +48,6 @@ const CourseSidebar = ({ coursesDetail }) => {
             /> */}
           <ReactPlayer
             url={coursesDetail?.videoLink}
-            style={{
-              width: "100%",
-              height: "100%",
-            }}
             width="100%" // Ensures it adapts to the parent div
             height="100%" // Maintains aspect ratio based on width
           />
