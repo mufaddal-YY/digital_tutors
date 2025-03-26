@@ -15,7 +15,7 @@ const VisionMission = ({ aboutData }) => {
             key={idx}
             className="w-full lg:w-5/12 bg-no-repeat bg-center bg-cover lg:bg-cover items-center"
             style={{
-              backgroundImage: `url(${item?.visionSectionImage})`,
+              backgroundImage: `url("${item?.visionSectionImage}")`,
             }}></div>
         ))}
 
