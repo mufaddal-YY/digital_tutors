@@ -24,7 +24,7 @@ const CoursesCard = ({ slug, courseThumb, courseName }) => {
       </div>
 
       <div className="px-4 py-2">
-        <div className="">
+        <div className="h-[80px]">
           <div className="flex flex-col">
             <div>
               <Link href={`/courses/${slug}`}>

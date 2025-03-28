@@ -10,7 +10,6 @@ import CourseSidebar from "@/components/Courses/CourseSidebar";
 export async function generateMetadata({ params }) {
   const { slug } = await params; // Await params here
   const coursesDetail = await getCoursesDetailData(slug);
-  console.log(coursesDetail);
 
   return {
     title: coursesDetail?.metatitle,
