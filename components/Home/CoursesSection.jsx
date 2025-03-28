@@ -80,7 +80,7 @@ const CoursesSection = ({ coursesData }) => {
   const isInView = useInView(sectionRef, { once: false });
 
   return (
-    <main className="bg-white items-center py-[100px]" id="courses">
+    <main className="bg-white items-center py-[50px]" id="courses">
       <section className="container items-center">
         <article className="flex flex-col lg:flex-row justify-between items-center">
           <div className="">
