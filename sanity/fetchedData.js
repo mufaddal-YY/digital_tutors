@@ -70,6 +70,7 @@ export async function getCoursesData() {
          courseName,
          subHeadline,
          "slug": slug.current,
+         courseNumber,
          "homeThumb": homeThumb.asset->url,
          "courseThumb": courseThumb.asset->url,
          videoLink,

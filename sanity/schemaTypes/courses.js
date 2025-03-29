@@ -38,6 +38,11 @@ export default {
       },
     },
     {
+      name: "courseNumber",
+      title: "Course Number",
+      type: "string",
+    },
+    {
       name: "homeThumb",
       title: "Home Page Thumbnail",
       type: "image",

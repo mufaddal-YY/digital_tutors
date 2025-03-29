@@ -7,11 +7,13 @@ const CoursesPage = async () => {
   const homeData = await getHomeData();
   const courseData = await getCoursesData();
 
+  const sortedCourses = courseData.sort((a, b) => a.courseNumber - b.courseNumber);
+
   return (
     <main>
       <section className="mt-[80px]">
         <Banner />
-        <CoursesGrid courseData={courseData} />
+        <CoursesGrid courseData={sortedCourses} />
         <Cta homeData={homeData} />
       </section>
     </main>

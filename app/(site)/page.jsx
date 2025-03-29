@@ -29,11 +29,16 @@ export async function generateMetadata() {
 export default async function Home() {
   const homeData = await getHomeData();
   const coursesData = await getCoursesData();
+
+  const sortedCourses = coursesData.sort(
+    (a, b) => a.courseNumber - b.courseNumber
+  );
+
   return (
     <main>
       <section className="mt-24">
         <HeroBanner homeData={homeData} />
-        <CoursesSection coursesData={coursesData} />
+        <CoursesSection coursesData={sortedCourses} />
         <WhyUsSection homeData={homeData} />
         {homeData.map((item, idx) => (
           <div key={idx}>
