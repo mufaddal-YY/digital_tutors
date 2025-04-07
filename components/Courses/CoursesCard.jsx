@@ -4,20 +4,34 @@ import React from "react";
 import { Button } from "../ui/button";
 import { FaArrowRight } from "react-icons/fa";
 
-const CoursesCard = ({ slug, courseThumb, courseName }) => {
+const CoursesCard = ({ slug, homeThumb, courseThumb, courseName }) => {
   return (
     <div className="mb-2 bg-white border-2 p-1 border-white hover:border-[#002391] shadow-[0px_0px_10px_1px_#edf2f7] rounded-xl">
       <div className="w-full overflow-hidden">
-        <div className="relative h-[250px] rounded-t-lg overflow-hidden">
+        <div className="relative rounded-t-lg overflow-hidden">
           <Link href={`/courses/${slug}`}>
-            <div className="relative w-full h-[250px]">
-              <Image
-                className="object-cover rounded-t-md"
-                src={courseThumb}
-                alt={courseName}
-                layout="fill"
-                priority
-              />
+            <div className="relative w-full">
+              {/* Mobile Image */}
+              <div className="relative block md:hidden w-full h-[550px]">
+                <Image
+                  className="object-cover rounded-t-md"
+                  src={homeThumb}
+                  alt={courseName}
+                  layout="fill"
+                  priority
+                />
+              </div>
+
+              {/* Desktop Image */}
+              <div className="relative hidden md:block h-[250px]">
+                <Image
+                  className="object-cover rounded-t-md"
+                  src={courseThumb}
+                  alt={courseName}
+                  layout="fill"
+                  priority
+                />
+              </div>
             </div>
           </Link>
         </div>

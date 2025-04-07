@@ -9,11 +9,12 @@ const CoursesGrid = ({ courseData }) => {
           {courseData.map((item) => (
             <div
               className="w-full mb-2 md:w-1/2 lg:w-1/3 lg:p-2"
-              key={item.courseName}>
+              key={item?.courseName}>
               <CoursesCard
                 courseThumb={item?.courseThumb}
                 slug={item?.slug}
                 courseName={item?.courseName}
+                homeThumb={item?.homeThumb}
               />
             </div>
           ))}
