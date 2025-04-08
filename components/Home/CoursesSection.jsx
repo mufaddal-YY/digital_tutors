@@ -121,9 +121,9 @@ const CoursesSection = ({ coursesData }) => {
             className="flex flex-row justify-between items-center">
             {coursesData.map((item, idx) => (
               <article className="p-2" key={idx}>
-                <div className="bg-white border border-[#1A0034] rounded-xl h-[980px] md:h-[500px] lg:h-[500px]">
-                  <div className="flex flex-col md:flex-row lg:flex-row items-center">
-                    <div className="relative overflow-hidden rounded-lg lg:rounded-l-lg w-full h-[450px] md:h-[500px] lg:h-[500px] lg:w-1/2">
+                <div className="bg-white border border-[#1A0034] rounded-xl min-h-[950px] md:min-h-[602px] lg:min-h-[460px]">
+                  <div className="flex flex-col md:flex-row lg:flex-row items-stretch">
+                    <div className="relative overflow-hidden rounded-lg lg:rounded-l-lg w-full lg:w-1/2 h-[500px] md:h-[600px] lg:h-[470px]">
                       <Image
                         className="rounded-lg lg:rounded-l-lg object-cover"
                         src={item?.homeThumb}
