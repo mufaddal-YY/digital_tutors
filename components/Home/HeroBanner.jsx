@@ -97,17 +97,25 @@ const HeroBanner = ({ homeData }) => {
                   </article>
                   <article className="w-full lg:w-1/2">
                     <div className="flex justify-center mt-3 items-center">
-                      {/* <ReactPlayer
-                        url={propertyDetail?.video}
-                        style={{ borderRadius: "24px" }}
-                      /> */}
+                      <div className="h-[280px] lg:h-[550px] w-full rounded-xl overflow-hidden">
+                        <ReactPlayer
+                          url="https://www.youtube.com/embed/AYPnc6-E7ew?si=ckBGsg325Jj2J5hZ"
+                          playing
+                          muted
+                          loop
+                          controls={false}
+                          width="100%"
+                          height="100%"
+                          className="react-player"
+                        />
+                      </div>
 
-                      <Image
+                      {/* <Image
                         src={item.heroImage}
                         width={500}
                         height={500}
                         alt={item.headline}
-                      />
+                      /> */}
                     </div>
                   </article>
                 </article>

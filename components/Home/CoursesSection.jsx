@@ -123,9 +123,9 @@ const CoursesSection = ({ coursesData }) => {
               <article className="p-2" key={idx}>
                 <div className="bg-white border border-[#1A0034] rounded-xl h-[980px] md:h-[500px] lg:h-[500px]">
                   <div className="flex flex-col md:flex-row lg:flex-row items-center">
-                    <div className="relative overflow-hidden rounded-lg lg:rounded-l-lg w-full h-[500px] lg:w-1/2">
+                    <div className="relative overflow-hidden rounded-lg lg:rounded-l-lg w-full h-[450px] lg:w-1/2">
                       <Image
-                        className="rounded-lg lg:rounded-l-lg object-cover hover:scale-[1.07] duration-1000"
+                        className="rounded-lg lg:rounded-l-lg object-cover"
                         src={item?.homeThumb}
                         layout="fill"
                         alt={idx}

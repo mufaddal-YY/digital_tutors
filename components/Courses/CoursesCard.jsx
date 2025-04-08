@@ -12,7 +12,7 @@ const CoursesCard = ({ slug, homeThumb, courseThumb, courseName }) => {
           <Link href={`/courses/${slug}`}>
             <div className="relative w-full">
               {/* Mobile Image */}
-              <div className="relative block md:hidden w-full h-[480px]">
+              <div className="relative block md:hidden w-full h-[450px]">
                 <Image
                   className="object-cover rounded-t-md"
                   src={homeThumb}
