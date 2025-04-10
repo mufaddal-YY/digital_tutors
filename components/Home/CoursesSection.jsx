@@ -57,7 +57,7 @@ const CoursesSection = ({ coursesData }) => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
       {
@@ -121,9 +121,9 @@ const CoursesSection = ({ coursesData }) => {
             className="flex flex-row justify-between items-center">
             {coursesData.map((item, idx) => (
               <article className="p-2" key={idx}>
-                <div className="bg-white border border-[#1A0034] rounded-xl min-h-[950px] md:min-h-[602px] lg:min-h-[460px]">
+                <div className="bg-white border border-[#1A0034] rounded-xl h-[850px] lg:h-auto">
                   <div className="flex flex-col md:flex-row lg:flex-row items-stretch">
-                    <div className="relative overflow-hidden rounded-lg lg:rounded-l-lg w-full lg:w-1/2 h-[500px] md:h-[600px] lg:h-[470px]">
+                    <div className="relative overflow-hidden rounded-lg lg:rounded-l-lg w-full lg:w-1/2 h-[390px] md:h-[580px] lg:h-[450px]">
                       <Image
                         className="rounded-lg lg:rounded-l-lg object-cover"
                         src={item?.homeThumb}
@@ -137,10 +137,12 @@ const CoursesSection = ({ coursesData }) => {
                           <Badge>Most Popular</Badge>
                         </div>
 
-                        <h2 className="text-xl font-semibold">
+                        <h2 className=" text-lg lg:text-xl font-semibold">
                           {item?.courseName}
                         </h2>
-                        <p className="text-md">{item?.subHeadline}</p>
+                        <p className="text-sm lg:text-md">
+                          {item?.subHeadline}
+                        </p>
 
                         <Separator className="my-2" />
                       </div>
