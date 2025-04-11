@@ -14,21 +14,23 @@ const CoursesCard = ({ slug, homeThumb, courseThumb, courseName }) => {
               {/* Mobile Image */}
               <div className="relative block md:hidden w-full h-[450px]">
                 <Image
-                  className="object-cover rounded-t-md"
+                  className=" rounded-t-md"
                   src={homeThumb}
                   alt={courseName}
-                  layout="fill"
+                  height={1000}
+                  width={875}
                   priority
                 />
               </div>
 
               {/* Desktop Image */}
-              <div className="relative hidden md:block h-[250px]">
+              <div className="relative hidden md:block w-full h-[250px]">
                 <Image
                   className="object-cover rounded-t-md"
                   src={courseThumb}
                   alt={courseName}
-                  layout="fill"
+                  width={1920}
+                  height={1080}
                   priority
                 />
               </div>

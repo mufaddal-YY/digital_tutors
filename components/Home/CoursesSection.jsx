@@ -57,7 +57,7 @@ const CoursesSection = ({ coursesData }) => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
       {
@@ -121,70 +121,61 @@ const CoursesSection = ({ coursesData }) => {
             className="flex flex-row justify-between items-center">
             {coursesData.map((item, idx) => (
               <article className="p-2" key={idx}>
-                <div className="bg-white border border-[#1A0034] rounded-xl h-[950px] lg:h-auto">
-                  <div className="flex flex-col md:flex-row lg:flex-row items-stretch">
-                    <div className="relative overflow-hidden rounded-lg lg:rounded-l-lg w-full lg:w-1/2 h-[480px] md:h-[580px] lg:h-[450px]">
+                <div className="bg-white border border-[#1A0034] rounded-xl overflow-hidden">
+                  <div className="flex flex-col md:flex-row items-stretch h-[850px] md:h-[auto]">
+                    <div className="relative w-full md:w-[350px] h-[400px] md:h-[450px] lg:h-[450px]">
                       <Image
-                        className="rounded-lg lg:rounded-l-lg object-cover"
+                        className="object-cover w-full h-full"
                         src={item?.homeThumb}
-                        layout="fill"
+                        width={1200}
+                        height={1000}
                         alt={idx}
+                        style={{ objectFit: "cover" }}
                       />
                     </div>
-                    <div className="w-full lg:w-1/2 p-3">
-                      <div className="flex flex-col gap-2 flex-start">
+                    {/* Right: Content */}
+                    <div className="w-full md:flex-1 p-3 flex flex-col">
+                      <div className="flex flex-col gap-2">
                         <div>
                           <Badge>Most Popular</Badge>
                         </div>
-
-                        <h2 className=" text-lg lg:text-xl font-semibold">
+                        <h2 className="text-lg lg:text-xl font-semibold">
                           {item?.courseName}
                         </h2>
                         <p className="text-sm lg:text-md">
                           {item?.subHeadline}
                         </p>
+                        <Separator className="my-1" />
+                      </div>
 
-                        <Separator className="my-2" />
+                      <div className="flex flex-col gap-2 mt-1">
+                        <p className="flex items-center gap-2 text-sm text-gray-700">
+                          <span className="text-[#FF3C3F]">
+                            <CgPlayButtonO />
+                          </span>
+                          {item?.onDemandVideo}
+                        </p>
+                        <p className="flex items-center gap-2 text-sm text-gray-700">
+                          <span className="text-[#FF3C3F]">
+                            <MdOutlineCloudDownload />
+                          </span>
+                          {item?.devices}
+                        </p>
+                        <p className="flex items-center gap-2 text-sm text-gray-700">
+                          <span className="text-[#FF3C3F]">
+                            <GrCertificate />
+                          </span>
+                          {item?.lifetimeAccess}
+                        </p>
+                        <p className="flex items-center gap-2 text-sm text-gray-700">
+                          <span className="text-[#FF3C3F]">
+                            <IoInfiniteSharp />
+                          </span>
+                          {item?.certificate}
+                        </p>
                       </div>
-                      <div className="flex flex-wrap">
-                        <div className="w-full">
-                          <p className="flex items-center gap-2 mb-4">
-                            <span className="text-[#FF3C3F]">
-                              <CgPlayButtonO />
-                            </span>
-                            <span className="text-sm">
-                              {item?.onDemandVideo}
-                            </span>
-                          </p>
-                        </div>
-                        <div className="w-full">
-                          <p className="flex items-center gap-2 mb-4">
-                            <span className="text-[#FF3C3F]">
-                              <MdOutlineCloudDownload />
-                            </span>
-                            <span className="text-sm">{item?.devices}</span>
-                          </p>
-                        </div>
-                        <div className="w-full">
-                          <p className="flex items-center gap-2 mb-4">
-                            <span className="text-[#FF3C3F]">
-                              <GrCertificate />
-                            </span>
-                            <span className="text-sm">
-                              {item?.lifetimeAccess}
-                            </span>
-                          </p>
-                        </div>
-                        <div className="w-full">
-                          <p className="flex items-center gap-2 mb-4">
-                            <span className="text-[#FF3C3F]">
-                              <IoInfiniteSharp />
-                            </span>
-                            <span className="text-sm">{item?.certificate}</span>
-                          </p>
-                        </div>
-                      </div>
-                      <div className="my-2">
+
+                      <div className="mt-4">
                         <Link href={`/courses/${item?.slug}`}>
                           <Button>
                             Learn More <IoMdArrowForward />
