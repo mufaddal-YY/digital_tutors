@@ -123,7 +123,7 @@ const CoursesSection = ({ coursesData }) => {
               <article className="p-2" key={idx}>
                 <div className="bg-white border border-[#1A0034] rounded-xl overflow-hidden">
                   <div className="flex flex-col md:flex-row items-stretch h-[850px] md:h-[auto]">
-                    <div className="relative w-full md:w-[350px] h-[400px] md:h-[450px] lg:h-[450px]">
+                    <div className="relative w-full md:w-[350px] h-[450px]">
                       <Image
                         className="object-cover w-full h-full"
                         src={item?.homeThumb}
